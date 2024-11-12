@@ -12,7 +12,7 @@ https://www.gideros.rocks/
 
 
 
-Please feel free to open an Issue to ask questions.
+Please feel free to open an Issue to ask questions about my projects here.
 
 
 **Viva Gideros**!

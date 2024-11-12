@@ -6,7 +6,9 @@ https://wiki.gideros.rocks
 
 
 
-This is a personal initiative trying to help with open source projects.
+This is a personal initiative trying to help with Gideros open source project:
+
+https://www.gideros.rocks/
 
 
 

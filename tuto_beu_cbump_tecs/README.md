@@ -2,9 +2,11 @@
 
 Sorry I couldn't come up with a more cryptic name.
 
-This is a complete game, a beat'em up made using Gideros:
+This is a complete game, a beat'em up made using Gideros for the Gideros Wiki:
 
 https://www.gideros.rocks/
+
+https://wiki.gideros.rocks/
 
 
 Plugins:

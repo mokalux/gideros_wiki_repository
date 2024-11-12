@@ -1,12 +1,13 @@
 # beu_cbump_tecs
 
-Sorry I couldn't come up with a more original name.
+Sorry I couldn't come up with a more cryptic name.
 
 This is a complete game, a beat'em up made using Gideros:
+
 https://www.gideros.rocks/
 
 
-Using:
+Plugins:
 - tiny-ECS
 - cbump
 

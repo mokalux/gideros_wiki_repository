@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <properties scaleMode="6" logicalWidth="360" logicalHeight="640" windowWidth="0" windowHeight="0" autorotation="0" orientation="1" fps="60" vsync="1" version="1.0" version_code="1" build_number="1" mainluaOnly="0" retinaDisplay="0" mouseToTouch="1" touchToMouse="1" mouseTouchOrder="0" architecture="5" exportMode="0" iosDevice="0" ios_bundle="com.yourdomain.yourapp-ios" atv_bundle="com.yourdomain.yourapp-atv" macos_bundle="com.yourdomain.yourapp-macos" macos_category="5" qtexp_platform="0" qtexp_org="GiderosMobile" qtexp_domain="giderosmobile.com" osx_bundle="com.yourdomain" osx_signingId="" osx_installerId="" osx_category="2" winrt_org="GiderosMobile" winrt_package="com.yourdomain.yourapp" html5_host="" html5_crash="" html5_mem="256" html5_pack="0" html5_wasm="0" html5_symbols="1" html5_fbinstant="0" html5_pwa="0" html5_fbload="100" encryptCode="1" encryptAssets="1" app_icon="" tv_icon="" disableSplash="0" backgroundColor="#ffffff" splash_h_image="" splash_v_image="" app_name="tiny-ecs demo2" splashScaleMode="0">
+        <imageScales/>
+        <plugins>
+            <plugin name="Bump" enabled="1"/>
+            <plugin name="Easing" enabled="0"/>
+            <plugin name="HarfBuzz" enabled="0"/>
+            <plugin name="JSON" enabled="1"/>
+            <plugin name="LuaFileSystem" enabled="0"/>
+            <plugin name="Media plugin" enabled="0"/>
+            <plugin name="Require" enabled="0">
+                <property name="reqAccel" value="0"/>
+                <property name="reqAlphaCanvas" value="0"/>
+                <property name="reqCanOpenUrl" value=""/>
+                <property name="reqCanRespondUrl" value=""/>
+                <property name="reqCompass" value="0"/>
+                <property name="reqDisable32bits" value="0"/>
+                <property name="reqDisable64bits" value="0"/>
+                <property name="reqDisableArm" value="0"/>
+                <property name="reqDisableX86" value="0"/>
+                <property name="reqExpRegCompliance" value="0"/>
+                <property name="reqFullOrientation" value="0"/>
+                <property name="reqGps" value="0"/>
+                <property name="reqGpsBackground" value="0"/>
+                <property name="reqGpsReason" value=""/>
+                <property name="reqGyro" value="0"/>
+                <property name="reqMaxAspect" value="1"/>
+                <property name="reqMinSdk" value=""/>
+                <property name="reqNoGps" value="0"/>
+                <property name="reqNoInternet" value="1"/>
+                <property name="reqNoMP3" value="0"/>
+                <property name="reqNoSensor" value="1"/>
+                <property name="reqNoVibrator" value="0"/>
+                <property name="reqNoXMP" value="0"/>
+                <property name="reqPhoneOnly" value="0"/>
+                <property name="reqPreventBackup" value="0"/>
+                <property name="reqScreenShape" value="1"/>
+                <property name="reqServerMode" value="0"/>
+                <property name="reqTVCompat" value="0"/>
+                <property name="reqTVExtCompat" value="0"/>
+                <property name="reqTouch" value="0"/>
+                <property name="reqTrackingReason" value=""/>
+                <property name="reqWriteExternalStorage" value="0"/>
+            </plugin>
+            <plugin name="SceneManager" enabled="0"/>
+        </plugins>
+        <exports>
+            <export name="APK">
+                <property name="androidPath" value=""/>
+                <property name="androidSdk" value=""/>
+                <property name="androidTarget" value="35"/>
+                <property name="buildAab" value="0"/>
+                <property name="buildApk" value="1"/>
+                <property name="deployApk" value="0"/>
+                <property name="forOculus" value="0"/>
+                <property name="javaPath" value=""/>
+                <property name="keyAlias" value=""/>
+                <property name="keyStore" value=""/>
+                <property name="oculusHT" value="0"/>
+                <property name="oculusHTR" value="0"/>
+                <property name="oculusPT" value="0"/>
+                <property name="oculusPTR" value="0"/>
+                <property name="packageName" value="com.yourdomain.gtbeu"/>
+                <property name="timestampApk" value="0"/>
+            </export>
+        </exports>
+    </properties>
+    <file name="assets/init.lua"/>
+    <file name="assets/main.lua"/>
+    <folder name="scenes">
+        <file name="assets/scenes/levelX.lua"/>
+        <file name="assets/scenes/menu.lua"/>
+        <file name="assets/scenes/options.lua"/>
+        <file name="assets/scenes/transitions.lua"/>
+        <file name="assets/scenes/win.lua"/>
+    </folder>
+    <folder name="gfx">
+        <file name="assets/gfx/logo.png"/>
+        <file name="assets/gfx/transition.png"/>
+        <folder name="player1">
+            <file name="assets/gfx/player1/mh_blue_haired2m_0130.png"/>
+            <folder name="win">
+                <file name="assets/gfx/player1/win/party-m-0001m_0001.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0002.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0003.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0004.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0005.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0006.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0007.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0008.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0009.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0010.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0011.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0012.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0013.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0014.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0015.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0016.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0017.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0018.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0019.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0020.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0021.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0022.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0023.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0024.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0025.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0026.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0027.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0028.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0029.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0030.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0031.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0032.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0033.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0034.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0035.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0036.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0037.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0038.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0039.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0040.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0041.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0042.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0043.png"/>
+                <file name="assets/gfx/player1/win/party-m-0001m_0044.png"/>
+            </folder>
+        </folder>
+        <folder name="nmes">
+            <file name="assets/gfx/nmes/65bf1add77c22d1745a4790bM_0019.png"/>
+            <file name="assets/gfx/nmes/Chad_m_0001.png"/>
+            <file name="assets/gfx/nmes/Ravi-Rigged_m_0001.png"/>
+            <file name="assets/gfx/nmes/mh_fatty01m_0001.png"/>
+        </folder>
+        <folder name="levels">
+            <file name="assets/gfx/levels/beu_bg_lvl1_0001.png"/>
+            <file name="assets/gfx/levels/drawlevelstiled.lua"/>
+            <folder name="beu_lvl3">
+                <file name="assets/gfx/levels/beu_lvl3/subway_car.001_0013.png"/>
+                <file name="assets/gfx/levels/beu_lvl3/untitled_0001.png"/>
+                <file name="assets/gfx/levels/beu_lvl3/untitled_0002.png"/>
+                <file name="assets/gfx/levels/beu_lvl3/untitled_0003.png"/>
+                <file name="assets/gfx/levels/beu_lvl3/untitledfg_0001.png"/>
+                <file name="assets/gfx/levels/beu_lvl3/untitledfg_0002.png"/>
+                <file name="assets/gfx/levels/beu_lvl3/untitledfg_0003.png"/>
+            </folder>
+            <folder name="beu_lvl2">
+                <file name="assets/gfx/levels/beu_lvl2/untitled_0001.png"/>
+                <file name="assets/gfx/levels/beu_lvl2/untitled_0002.png"/>
+                <file name="assets/gfx/levels/beu_lvl2/untitled_0003.png"/>
+            </folder>
+            <folder name="beu_lvl1">
+                <file name="assets/gfx/levels/beu_lvl1/beu_fg_lvl1_0001.png"/>
+                <file name="assets/gfx/levels/beu_lvl1/beu_fg_lvl1_0002.png"/>
+                <file name="assets/gfx/levels/beu_lvl1/beu_fg_lvl1_0003.png"/>
+                <file name="assets/gfx/levels/beu_lvl1/untitled_0001.png"/>
+                <file name="assets/gfx/levels/beu_lvl1/untitled_0002.png"/>
+                <file name="assets/gfx/levels/beu_lvl1/untitled_0003.png"/>
+            </folder>
+        </folder>
+        <folder name="fx">
+            <file name="assets/gfx/fx/1.png"/>
+            <file name="assets/gfx/fx/2.png"/>
+            <file name="assets/gfx/fx/fxBarrel_02_0011.png"/>
+            <file name="assets/gfx/fx/shadow.png"/>
+        </folder>
+        <folder name="collectible">
+            <file name="assets/gfx/collectible/Dragon Eggs 1.png"/>
+        </folder>
+        <folder name="breakable">
+            <file name="assets/gfx/breakable/Barrel_02_0012.png"/>
+        </folder>
+    </folder>
+    <folder name="fonts">
+        <file name="assets/fonts/Cabin-Regular-TTF.ttf"/>
+    </folder>
+    <folder name="classes">
+        <file name="assets/classes/aslider.lua"/>
+        <file name="assets/classes/buttonMonster.lua"/>
+        <file name="assets/classes/gcam.lua"/>
+        <file name="assets/classes/save_prefs.lua"/>
+        <file name="assets/classes/tiny-ecs.lua"/>
+        <file name="assets/classes/typewriter.lua"/>
+    </folder>
+    <folder name="audio">
+        <folder name="ui">
+            <file name="assets/audio/ui/sfx_sounds_button1.wav"/>
+        </folder>
+        <folder name="sfx">
+            <file name="assets/audio/sfx/sfx_coin_double1.wav"/>
+            <file name="assets/audio/sfx/sfx_deathscream_human14.wav"/>
+            <file name="assets/audio/sfx/sfx_wpn_laser4.wav"/>
+            <folder name="footstep">
+                <file name="assets/audio/sfx/footstep/Forest02.wav"/>
+                <file name="assets/audio/sfx/footstep/Grass02.wav"/>
+            </folder>
+        </folder>
+    </folder>
+    <folder name="_S">
+        <file name="assets/_S/sAI.lua"/>
+        <file name="assets/_S/sAnimation.lua"/>
+        <file name="assets/_S/sCollectible.lua"/>
+        <file name="assets/_S/sCollision.lua"/>
+        <file name="assets/_S/sDebugCollectible.lua"/>
+        <file name="assets/_S/sDebugCollision.lua"/>
+        <file name="assets/_S/sDebugHitBoxNme.lua"/>
+        <file name="assets/_S/sDebugHitBoxPlayer.lua"/>
+        <file name="assets/_S/sDebugHurtBoxNme.lua"/>
+        <file name="assets/_S/sDebugHurtBoxPlayer.lua"/>
+        <file name="assets/_S/sDebugShapeBox.lua"/>
+        <file name="assets/_S/sDebugSpriteSorting.lua"/>
+        <file name="assets/_S/sDestructibleObjects.lua"/>
+        <file name="assets/_S/sDrawable.lua"/>
+        <file name="assets/_S/sDynamicBodies.lua"/>
+        <file name="assets/_S/sHitboxHurtboxCollision.lua"/>
+        <file name="assets/_S/sNmes.lua"/>
+        <file name="assets/_S/sPlayer1.lua"/>
+        <file name="assets/_S/sPlayer1Control.lua"/>
+        <file name="assets/_S/sShadow.lua"/>
+        <file name="assets/_S/sSpritesSorting.lua"/>
+    </folder>
+    <folder name="_E">
+        <file name="assets/_E/eCollectible.lua"/>
+        <file name="assets/_E/eDestructibleObject.lua"/>
+        <file name="assets/_E/eNme1.lua"/>
+        <file name="assets/_E/eNme2.lua"/>
+        <file name="assets/_E/eNme3.lua"/>
+        <file name="assets/_E/eNme4.lua"/>
+        <file name="assets/_E/ePlayer1.lua"/>
+    </folder>
+    <folder name="_C">
+        <file name="assets/_C/cAI.lua"/>
+        <file name="assets/_C/cAnimation.lua"/>
+        <file name="assets/_C/cBody.lua"/>
+        <file name="assets/_C/cCollisionBox.lua"/>
+        <file name="assets/_C/cShadow.lua"/>
+    </folder>
+</project>

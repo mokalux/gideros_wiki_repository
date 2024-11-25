@@ -134,7 +134,6 @@
             <file name="assets/gfx/nmes/mh_fatty01m_0001.png"/>
         </folder>
         <folder name="levels">
-            <file name="assets/gfx/levels/beu_bg_lvl1_0001.png"/>
             <file name="assets/gfx/levels/drawlevelstiled.lua"/>
             <folder name="beu_lvl3">
                 <file name="assets/gfx/levels/beu_lvl3/subway_car.001_0013.png"/>
@@ -178,7 +177,7 @@
     <folder name="classes">
         <file name="assets/classes/aslider.lua"/>
         <file name="assets/classes/buttonMonster.lua"/>
-        <file name="assets/classes/gcam.lua"/>
+        <file name="assets/classes/gcam_beu.lua"/>
         <file name="assets/classes/save_prefs.lua"/>
         <file name="assets/classes/tiny-ecs.lua"/>
         <file name="assets/classes/typewriter.lua"/>
@@ -202,13 +201,11 @@
         <file name="assets/_S/sAnimation.lua"/>
         <file name="assets/_S/sCollectible.lua"/>
         <file name="assets/_S/sCollision.lua"/>
-        <file name="assets/_S/sDebugCollectible.lua"/>
         <file name="assets/_S/sDebugCollision.lua"/>
         <file name="assets/_S/sDebugHitBoxNme.lua"/>
         <file name="assets/_S/sDebugHitBoxPlayer.lua"/>
         <file name="assets/_S/sDebugHurtBoxNme.lua"/>
         <file name="assets/_S/sDebugHurtBoxPlayer.lua"/>
-        <file name="assets/_S/sDebugShapeBox.lua"/>
         <file name="assets/_S/sDebugSpriteSorting.lua"/>
         <file name="assets/_S/sDestructibleObjects.lua"/>
         <file name="assets/_S/sDrawable.lua"/>

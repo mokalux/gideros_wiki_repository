@@ -20,13 +20,17 @@ function SDebugHurtBoxNme:onAdd(ent) -- tiny function
 end
 
 function SDebugHurtBoxNme:onRemove(ent) -- tiny function
-	ent.spritelayer:removeChild(ent.debugheadhurtbox)
-	ent.spritelayer:removeChild(ent.debugspinehurtbox)
+	if not ent.isdestructibleobject then -- isdestructibleobject is somehow already removed!
+		ent.spritelayer:removeChild(ent.debugheadhurtbox)
+		ent.spritelayer:removeChild(ent.debugspinehurtbox)
+	end
 end
 
 function SDebugHurtBoxNme:process(ent, dt) -- tiny function
---	ent.debugheadhurtbox:setPosition(ent.x+ent.collbox.w/2+(ent.headhurtbox.x*ent.flip), ent.y+ent.headhurtbox.y)
---	ent.debugspinehurtbox:setPosition(ent.x+ent.collbox.w/2+(ent.spinehurtbox.x*ent.flip), ent.y+ent.spinehurtbox.y)
-	ent.debugheadhurtbox:setPosition(ent.pos+vector(ent.collbox.w/2+(ent.headhurtbox.x*ent.flip), ent.headhurtbox.y))
-	ent.debugspinehurtbox:setPosition(ent.pos+vector(ent.collbox.w/2+(ent.spinehurtbox.x*ent.flip), ent.spinehurtbox.y))
+	local function fun()
+		ent.debugheadhurtbox:setPosition(ent.pos+vector(ent.collbox.w/2+(ent.headhurtbox.x*ent.flip), ent.headhurtbox.y))
+		ent.debugspinehurtbox:setPosition(ent.pos+vector(ent.collbox.w/2+(ent.spinehurtbox.x*ent.flip), ent.spinehurtbox.y))
+		Core.yield(1)
+	end
+	Core.asyncCall(fun)
 end

@@ -67,27 +67,24 @@ end
 function SDebugHitBoxPlayer:process(ent, dt) -- tiny function
 	local function fun()
 		if ent.headhitboxattack1 then
-			ent.debugheadhitboxp1:setPosition(ent.x+ent.collbox.w/2+(ent.headhitboxattack1.x*ent.flip), ent.y+ent.headhitboxattack1.y)
+			ent.debugheadhitboxp1:setPosition(ent.pos + vector(ent.collbox.w/2+(ent.headhitboxattack1.x*ent.flip), ent.headhitboxattack1.y))
 		end
 		if ent.headhitboxattack2 then
-			ent.debugheadhitboxp2:setPosition(ent.x+ent.collbox.w/2+(ent.headhitboxattack2.x*ent.flip), ent.y+ent.headhitboxattack2.y)
+			ent.debugheadhitboxp2:setPosition(ent.pos + vector(ent.collbox.w/2+(ent.headhitboxattack2.x*ent.flip), ent.headhitboxattack2.y))
 		end
 		if ent.spinehitboxattack1 then
-			ent.debugspinehitboxk1:setPosition(ent.x+ent.collbox.w/2+(ent.spinehitboxattack1.x*ent.flip), ent.y+ent.spinehitboxattack1.y)
+			ent.debugspinehitboxk1:setPosition(ent.pos + vector(ent.collbox.w/2+(ent.spinehitboxattack1.x*ent.flip), ent.spinehitboxattack1.y))
 		end
 		if ent.spinehitboxattack2 then
-			ent.debugspinehitboxk2:setPosition(ent.x+ent.collbox.w/2+(ent.spinehitboxattack2.x*ent.flip), ent.y+ent.spinehitboxattack2.y)
+			ent.debugspinehitboxk2:setPosition(ent.pos + vector(ent.collbox.w/2+(ent.spinehitboxattack2.x*ent.flip), ent.spinehitboxattack2.y))
 		end
 		if ent.headhitboxjattack1 then
-			ent.debugheadhitboxjp1:setPosition(ent.x+ent.collbox.w/2+(ent.headhitboxjattack1.x*ent.flip), ent.y+ent.headhitboxjattack1.y)
+			ent.debugheadhitboxjp1:setPosition(ent.pos + vector(ent.collbox.w/2+(ent.headhitboxjattack1.x*ent.flip), ent.headhitboxjattack1.y))
 		end
 		if ent.spinehitboxjattack1 then
-			ent.debugspinehitboxjk1:setPosition(ent.x+ent.collbox.w/2+(ent.spinehitboxjattack1.x*ent.flip), ent.y+ent.spinehitboxjattack1.y)
+			ent.debugspinehitboxjk1:setPosition(ent.pos + vector(ent.collbox.w/2+(ent.spinehitboxjattack1.x*ent.flip), ent.spinehitboxjattack1.y))
 		end
 		Core.yield(1)
 	end
 	Core.asyncCall(fun)
 end
-
-
-

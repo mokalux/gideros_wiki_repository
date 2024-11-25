@@ -27,6 +27,10 @@ function SDebugSpriteSorting:onRemove(ent) -- tiny function
 end
 
 function SDebugSpriteSorting:process(ent, dt) -- tiny function
-	ent.debugposition:setPosition(ent.x, ent.y)
-	ent.debugstartyposition:setPosition(ent.x, ent.positionystart)
+	local function fun()
+		ent.debugposition:setPosition(ent.pos)
+		ent.debugstartyposition:setPosition(ent.pos.x, ent.positionystart)
+		Core.yield(1)
+	end
+	Core.asyncCall(fun)
 end

@@ -25,12 +25,10 @@ function SDebugHurtBoxPlayer:onRemove(ent) -- tiny function
 end
 
 function SDebugHurtBoxPlayer:process(ent, dt) -- tiny function
-	ent.debugheadhurtbox:setPosition(ent.x+ent.collbox.w/2+(ent.headhurtbox.x*ent.flip), ent.y+ent.headhurtbox.y)
-	ent.debugspinehurtbox:setPosition(ent.x+ent.collbox.w/2+(ent.spinehurtbox.x*ent.flip), ent.y+ent.spinehurtbox.y)
+	local function fun()
+		ent.debugheadhurtbox:setPosition(ent.pos + vector(ent.collbox.w/2+(ent.headhurtbox.x*ent.flip), ent.headhurtbox.y))
+		ent.debugspinehurtbox:setPosition(ent.pos + vector(ent.collbox.w/2+(ent.spinehurtbox.x*ent.flip), ent.spinehurtbox.y))
+		Core.yield(1)
+	end
+	Core.asyncCall(fun)
 end
-
-
-
-
-
-

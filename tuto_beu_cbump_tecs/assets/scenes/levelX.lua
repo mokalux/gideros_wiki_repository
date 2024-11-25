@@ -152,13 +152,12 @@ function LevelX:init()
 	--|_____/   |_| |_____/   |_|  |______|_|  |_|_____/ 
 	self.tiny.tworld:add(
 		-- debug
---		SDebugCollision.new(self.tiny),
---	 	SDebugHurtBoxPlayer.new(self.tiny),
---	 	SDebugHurtBoxNme.new(self.tiny),
---		SDebugHitBoxPlayer.new(self.tiny, { true, true, true, true, false, false } ), -- the 6 abilities (granular debugging)
---		SDebugHitBoxNme.new(self.tiny, { true, true, true, true, true, true } ), -- the 6 abilities (granular debugging)
---		SDebugCollectible.new(self.tiny),
---		SDebugSpriteSorting.new(self.tiny),
+		SDebugCollision.new(self.tiny),
+	 	SDebugHurtBoxPlayer.new(self.tiny),
+	 	SDebugHurtBoxNme.new(self.tiny),
+		SDebugHitBoxPlayer.new(self.tiny, { true, true, true, true, false, false } ), -- the 6 abilities (granular debugging)
+		SDebugHitBoxNme.new(self.tiny, { true, true, true, true, true, true } ), -- the 6 abilities (granular debugging)
+		SDebugSpriteSorting.new(self.tiny),
 		-- systems
 		SDrawable.new(self.tiny),
 		SAnimation.new(self.tiny),

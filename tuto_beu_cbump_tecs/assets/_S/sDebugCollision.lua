@@ -20,5 +20,9 @@ function SDebugCollision:onRemove(ent) -- tiny function
 end
 
 function SDebugCollision:process(ent, dt) -- tiny function
-	ent.debug:setPosition(ent.x, ent.y)
+	local function fun()
+		ent.debug:setPosition(ent.pos)
+		Core.yield(1)
+	end
+	Core.asyncCall(fun)
 end

@@ -15,7 +15,7 @@ Plugins:
 
 All assets are cc0, you can use them as you wish.
 
-![pic](assets/gfx/levels/beu_lvl3/untitled_0001.png)
+![pic](assets/gfx/player1/Matt_0001.png)
 
 
 

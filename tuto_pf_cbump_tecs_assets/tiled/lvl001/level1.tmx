@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="left-down" width="512" height="512" tilewidth="32" tileheight="32" infinite="0" backgroundcolor="#aaaaff" nextlayerid="87" nextobjectid="3141">
+ <editorsettings>
+  <export target="level1.lua" format="lua"/>
+ </editorsettings>
+ <tileset firstgid="1" name="imgs" tilewidth="228" tileheight="254" tilecount="77" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image source="gfx/Barrel_0001.png" width="26" height="42"/>
+  </tile>
+  <tile id="1">
+   <image source="gfx/Chest_0002.png" width="24" height="15"/>
+  </tile>
+  <tile id="2">
+   <image source="gfx/Chest_0003.png" width="26" height="15"/>
+  </tile>
+  <tile id="3">
+   <image source="gfx/Chest_0004.png" width="28" height="15"/>
+  </tile>
+  <tile id="4">
+   <image source="gfx/Chest_Special_0005.png" width="34" height="15"/>
+  </tile>
+  <tile id="5">
+   <image source="gfx/Chest_Special_0006.png" width="32" height="15"/>
+  </tile>
+  <tile id="6">
+   <image source="gfx/Chest_Special_0007.png" width="30" height="15"/>
+  </tile>
+  <tile id="7">
+   <image source="gfx/CinderBlock_0008.png" width="20" height="8"/>
+  </tile>
+  <tile id="8">
+   <image source="gfx/CinderBlock_0009.png" width="18" height="8"/>
+  </tile>
+  <tile id="9">
+   <image source="gfx/CinderBlock_0010.png" width="20" height="8"/>
+  </tile>
+  <tile id="10">
+   <image source="gfx/Container_Green_0011.png" width="186" height="96"/>
+  </tile>
+  <tile id="11">
+   <image source="gfx/Container_Green_0012.png" width="228" height="96"/>
+  </tile>
+  <tile id="12">
+   <image source="gfx/Container_Green_0013.png" width="228" height="96"/>
+  </tile>
+  <tile id="13">
+   <image source="gfx/Container_Green_0014.png" width="186" height="96"/>
+  </tile>
+  <tile id="14">
+   <image source="gfx/Container_Red_0015.png" width="228" height="96"/>
+  </tile>
+  <tile id="15">
+   <image source="gfx/Container_Red_0016.png" width="210" height="96"/>
+  </tile>
+  <tile id="16">
+   <image source="gfx/Container_Red_0017.png" width="186" height="96"/>
+  </tile>
+  <tile id="17">
+   <image source="gfx/Couch_0018.png" width="111" height="46"/>
+  </tile>
+  <tile id="18">
+   <image source="gfx/Couch_0019.png" width="112" height="46"/>
+  </tile>
+  <tile id="19">
+   <image source="gfx/Couch_0020.png" width="87" height="46"/>
+  </tile>
+  <tile id="20">
+   <image source="gfx/FireHydrant_0021.png" width="20" height="29"/>
+  </tile>
+  <tile id="21">
+   <image source="gfx/Pallet_0022.png" width="44" height="5"/>
+  </tile>
+  <tile id="22">
+   <image source="gfx/Pallet_0023.png" width="50" height="5"/>
+  </tile>
+  <tile id="23">
+   <image source="gfx/Pallet_Broken_0024.png" width="46" height="6"/>
+  </tile>
+  <tile id="24">
+   <image source="gfx/Pickup_0025.png" width="200" height="68"/>
+  </tile>
+  <tile id="25">
+   <image source="gfx/Pickup_Armored_0026.png" width="200" height="70"/>
+  </tile>
+  <tile id="26">
+   <image source="gfx/Pickup_Armored_0027.png" width="200" height="70"/>
+  </tile>
+  <tile id="27">
+   <image source="gfx/Pickup_Armored_0028.png" width="156" height="70"/>
+  </tile>
+  <tile id="28">
+   <image source="gfx/Pickup_Armored_0029.png" width="200" height="70"/>
+  </tile>
+  <tile id="29">
+   <image source="gfx/Pipes_0030.png" width="114" height="23"/>
+  </tile>
+  <tile id="30">
+   <image source="gfx/Pipes_0031.png" width="118" height="23"/>
+  </tile>
+  <tile id="31">
+   <image source="gfx/Pipes_0032.png" width="80" height="23"/>
+  </tile>
+  <tile id="32">
+   <image source="gfx/PlasticBarrier_0033.png" width="12" height="21"/>
+  </tile>
+  <tile id="33">
+   <image source="gfx/PlasticBarrier_0034.png" width="38" height="21"/>
+  </tile>
+  <tile id="34">
+   <image source="gfx/PlasticBarrier_0035.png" width="38" height="21"/>
+  </tile>
+  <tile id="35">
+   <image source="gfx/Sports_Armored_0036.png" width="149" height="51"/>
+  </tile>
+  <tile id="36">
+   <image source="gfx/Sports_Armored_0037.png" width="121" height="51"/>
+  </tile>
+  <tile id="37">
+   <image source="gfx/Sports_Armored_0038.png" width="149" height="51"/>
+  </tile>
+  <tile id="38">
+   <image source="gfx/StreetLights_0039.png" width="80" height="180"/>
+  </tile>
+  <tile id="39">
+   <image source="gfx/StreetLights_0040.png" width="48" height="180"/>
+  </tile>
+  <tile id="40">
+   <image source="gfx/StreetLights_0041.png" width="48" height="180"/>
+  </tile>
+  <tile id="41">
+   <image source="gfx/StreetLights_0042.png" width="80" height="180"/>
+  </tile>
+  <tile id="42">
+   <image source="gfx/TownSign_0043.png" width="162" height="145"/>
+  </tile>
+  <tile id="43">
+   <image source="gfx/TownSign_0044.png" width="160" height="145"/>
+  </tile>
+  <tile id="44">
+   <image source="gfx/TownSign_0045.png" width="160" height="145"/>
+  </tile>
+  <tile id="45">
+   <image source="gfx/TrafficBarrier_1_0046.png" width="36" height="30"/>
+  </tile>
+  <tile id="46">
+   <image source="gfx/TrafficBarrier_1_0047.png" width="38" height="30"/>
+  </tile>
+  <tile id="47">
+   <image source="gfx/TrafficBarrier_1_0048.png" width="42" height="30"/>
+  </tile>
+  <tile id="48">
+   <image source="gfx/TrafficBarrier_1_0049.png" width="38" height="30"/>
+  </tile>
+  <tile id="49">
+   <image source="gfx/TrafficBarrier_1_0050.png" width="36" height="30"/>
+  </tile>
+  <tile id="50">
+   <image source="gfx/TrafficBarrier_2_0051.png" width="38" height="22"/>
+  </tile>
+  <tile id="51">
+   <image source="gfx/TrafficBarrier_2_0052.png" width="44" height="22"/>
+  </tile>
+  <tile id="52">
+   <image source="gfx/TrafficBarrier_2_0053.png" width="42" height="22"/>
+  </tile>
+  <tile id="53">
+   <image source="gfx/TrafficBarrier_2_0054.png" width="44" height="22"/>
+  </tile>
+  <tile id="54">
+   <image source="gfx/TrafficBarrier_2_0055.png" width="38" height="22"/>
+  </tile>
+  <tile id="55">
+   <image source="gfx/TrafficCone_1_0056.png" width="14" height="18"/>
+  </tile>
+  <tile id="56">
+   <image source="gfx/TrafficCone_2_0057.png" width="16" height="20"/>
+  </tile>
+  <tile id="57">
+   <image source="gfx/TrafficLight_1_0058.png" width="42" height="127"/>
+  </tile>
+  <tile id="58">
+   <image source="gfx/TrafficLight_1_0059.png" width="42" height="127"/>
+  </tile>
+  <tile id="59">
+   <image source="gfx/TrafficLight_1_0060.png" width="42" height="127"/>
+  </tile>
+  <tile id="60">
+   <image source="gfx/TrafficLight_2_0061.png" width="90" height="127"/>
+  </tile>
+  <tile id="61">
+   <image source="gfx/TrafficLight_2_0062.png" width="52" height="127"/>
+  </tile>
+  <tile id="62">
+   <image source="gfx/TrafficLight_2_0063.png" width="144" height="127"/>
+  </tile>
+  <tile id="63">
+   <image source="gfx/TrashBag_1_0064.png" width="14" height="15"/>
+  </tile>
+  <tile id="64">
+   <image source="gfx/TrashBag_2_0065.png" width="24" height="14"/>
+  </tile>
+  <tile id="65">
+   <image source="gfx/Truck_Armored_0066.png" width="134" height="79"/>
+  </tile>
+  <tile id="66">
+   <image source="gfx/Truck_Armored_0067.png" width="164" height="79"/>
+  </tile>
+  <tile id="67">
+   <image source="gfx/Truck_Armored_0068.png" width="80" height="79"/>
+  </tile>
+  <tile id="68">
+   <image source="gfx/Truck_Armored_0069.png" width="134" height="79"/>
+  </tile>
+  <tile id="69">
+   <image source="gfx/Truck_Armored_0070.png" width="164" height="79"/>
+  </tile>
+  <tile id="70">
+   <image source="gfx/Truck_Armored_0071.png" width="152" height="79"/>
+  </tile>
+  <tile id="71">
+   <image source="gfx/WaterTower_0072.png" width="72" height="254"/>
+  </tile>
+  <tile id="72">
+   <image source="gfx/WaterTower_0073.png" width="98" height="254"/>
+  </tile>
+  <tile id="73">
+   <image source="gfx/WaterTower_0074.png" width="100" height="254"/>
+  </tile>
+  <tile id="74">
+   <image source="gfx/Wheel_0075.png" width="16" height="6"/>
+  </tile>
+  <tile id="75">
+   <image source="gfx/Wheels_Stack_0076.png" width="18" height="17"/>
+  </tile>
+  <tile id="76">
+   <image source="gfx/Wheels_Stack_0077.png" width="16" height="17"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="78" name="imgs2" tilewidth="0" tileheight="0" tilecount="0" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+ </tileset>
+ <tileset firstgid="78" name="imgs3" tilewidth="0" tileheight="0" tilecount="0" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+ </tileset>
+ <tileset firstgid="78" name="_level" tilewidth="512" tileheight="256" tilecount="2" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image source="gfx/_noise_512_256_20250802_031610.png" width="512" height="256"/>
+  </tile>
+  <tile id="1">
+   <image source="gfx/_noise_512_256_20250821_052916.png" width="512" height="256"/>
+  </tile>
+ </tileset>
+ <objectgroup color="#ff55ff" id="32" name="bg_deco_texts" tintcolor="#00ff00"/>
+ <objectgroup color="#550000" id="56" name="bg_deco_shapes" tintcolor="#402917">
+  <object id="2877" name="spikes" x="7504" y="9952">
+   <polygon points="0,0 8,-8 16,0 24,-8 32,0 40,-8 48,0"/>
+  </object>
+  <object id="2927" name="lava" x="5752" y="10648" width="120" height="80"/>
+  <object id="2928" name="lava" x="6112" y="10648" width="120" height="80"/>
+  <object id="2929" name="spikes" x="7640" y="9952">
+   <polygon points="0,0 8,-8 16,0 24,-8 32,0 40,-8 48,0"/>
+  </object>
+  <object id="2932" name="spikes" x="7784" y="9952">
+   <polygon points="0,0 8,-8 16,0 24,-8 32,0 40,-8 48,0"/>
+  </object>
+  <object id="2935" name="lava" x="8032" y="9992" width="520" height="696"/>
+  <object id="2995" x="6544" y="10584" width="32" height="8" rotation="1"/>
+  <object id="2996" x="6544" y="10560" width="32" height="8" rotation="-1"/>
+  <object id="2997" x="6544" y="10512" width="32" height="8" rotation="-2"/>
+  <object id="2998" x="6544" y="10488" width="32" height="8" rotation="-1"/>
+  <object id="2999" x="6544" y="10464" width="32" height="8"/>
+  <object id="3000" x="6544" y="10440" width="32" height="8" rotation="1"/>
+  <object id="3001" x="6544" y="10416" width="32" height="8" rotation="-1"/>
+  <object id="3002" x="6544" y="10392" width="32" height="8" rotation="-2"/>
+  <object id="3003" x="6544" y="10368" width="32" height="8" rotation="2"/>
+  <object id="3004" x="6544" y="10536" width="32" height="8" rotation="2"/>
+  <object id="3005" x="6544" y="10344" width="32" height="8" rotation="1"/>
+  <object id="3006" x="6544" y="10320" width="32" height="8" rotation="-2"/>
+  <object id="3007" x="6544" y="10304" width="2" height="296"/>
+  <object id="3008" x="6574" y="10304" width="2" height="296"/>
+  <object id="3009" x="6544" y="10304" width="32" height="8"/>
+  <object id="3088" x="5776" y="10000">
+   <polyline points="0,0 -8,-8 -8,-16 0,-24 8,-32 -8,-32 8,-16 8,-32"/>
+  </object>
+  <object id="3089" x="5696" y="9984">
+   <polyline points="0,0 8,-8 8,-24 0,-32 -8,-40 -8,-24 8,-40 -8,-40"/>
+  </object>
+ </objectgroup>
+ <objectgroup id="66" name="bg_deco_images04x"/>
+ <objectgroup id="67" name="bg_deco_images04">
+  <object id="2989" gid="10" x="5992" y="10600" width="20" height="8"/>
+  <object id="2990" gid="10" x="5991" y="10592" width="20" height="8"/>
+  <object id="3010" gid="74" x="6424" y="10600" width="96" height="243.84"/>
+  <object id="3036" gid="31" x="6768" y="10305" width="118" height="23"/>
+  <object id="3037" gid="30" x="6648" y="10304" width="114" height="23"/>
+  <object id="3048" gid="42" x="7304" y="10304" width="128" height="288"/>
+  <object id="3079" gid="26" x="9632" y="10144" width="200" height="70"/>
+  <object id="3081" gid="32" x="10096" y="10144" width="80" height="23"/>
+  <object id="3090" gid="65" x="10728" y="10400" width="24" height="14"/>
+  <object id="3091" gid="64" x="10744" y="10400" width="14" height="15"/>
+  <object id="3092" gid="70" x="10800" y="10400" width="164" height="79"/>
+  <object id="3093" gid="1" x="11128" y="10528" width="26" height="42"/>
+  <object id="3094" gid="2" x="11176" y="10528" width="24" height="15"/>
+  <object id="3095" gid="3" x="11176" y="10513" width="26" height="15"/>
+  <object id="3096" gid="5" x="11208" y="10528" width="34" height="15"/>
+  <object id="3097" gid="6" x="11208" y="10513" width="32" height="15"/>
+  <object id="3101" gid="21" x="11472" y="10528" width="20" height="29"/>
+  <object id="3106" gid="74" x="11304" y="10528" width="100" height="254"/>
+  <object id="3109" gid="73" x="11480" y="10528" width="98" height="254"/>
+  <object id="3112" gid="42" x="8304" y="9952" width="80" height="180"/>
+  <object id="3113" gid="39" x="8224" y="9952" width="80" height="180"/>
+  <object id="3114" gid="41" x="8584" y="9984" width="48" height="180"/>
+  <object id="3115" gid="64" x="8576" y="9984" width="14" height="15"/>
+  <object id="3116" gid="65" x="8552" y="9984" width="24" height="14"/>
+  <object id="3118" gid="28" x="8984" y="9920" width="156" height="70"/>
+  <object id="3131" gid="8" x="9992" y="10144" width="20" height="8"/>
+  <object id="3132" gid="9" x="9920" y="10144" width="18" height="8"/>
+  <object id="3133" gid="9" x="9944" y="10144" width="18" height="8"/>
+  <object id="3134" gid="9" x="9936" y="10136" width="18" height="8"/>
+  <object id="3135" gid="10" x="10080" y="10144" width="20" height="8"/>
+  <object id="3137" gid="77" x="11256" y="10528" width="16" height="17"/>
+ </objectgroup>
+ <objectgroup id="42" name="bg_deco_images03x"/>
+ <objectgroup id="63" name="bg_deco_images03">
+  <object id="2970" gid="1" x="5432" y="10596" width="24" height="38.7692"/>
+  <object id="2971" gid="1" x="5464" y="10596" width="24" height="38.7692"/>
+  <object id="2972" gid="22" x="5432" y="10600" width="44" height="5"/>
+  <object id="2973" gid="23" x="5476" y="10600" width="50" height="5"/>
+  <object id="2974" gid="1" x="5488" y="10596" width="24" height="38.7692"/>
+  <object id="2979" gid="8" x="5536" y="10600" width="20" height="8"/>
+  <object id="2980" gid="10" x="5536" y="10592" width="20" height="8"/>
+  <object id="2982" gid="56" x="5736" y="10600" width="14" height="18"/>
+  <object id="2983" gid="56" x="5872" y="10600" width="14" height="18"/>
+  <object id="2984" gid="56" x="6096" y="10600" width="14" height="18"/>
+  <object id="2985" gid="56" x="6232" y="10600" width="14" height="18"/>
+  <object id="2986" gid="72" x="5952" y="10600" width="52.1575" height="184"/>
+  <object id="2991" gid="11" x="6280" y="10600" width="186" height="96"/>
+  <object id="3011" gid="57" x="6472" y="10240" width="16" height="20"/>
+  <object id="3012" gid="57" x="6384" y="10240" width="16" height="20"/>
+  <object id="3013" gid="65" x="6376" y="10152" width="24" height="14"/>
+  <object id="3014" gid="22" x="6392" y="10152" width="44" height="5"/>
+  <object id="3015" gid="1" x="6312" y="10064" width="26" height="42"/>
+  <object id="3016" gid="2" x="6288" y="10064" width="24" height="15"/>
+  <object id="3017" gid="3" x="6288" y="10048" width="26" height="15"/>
+  <object id="3021" gid="11" x="6016" y="10056" width="186" height="96"/>
+  <object id="3022" gid="18" x="5840" y="10064" width="111" height="46"/>
+  <object id="3023" gid="20" x="5448" y="10064" width="87" height="46"/>
+  <object id="3024" gid="23" x="5784" y="10064" width="50" height="5"/>
+  <object id="3025" gid="23" x="5544" y="10064" width="50" height="5"/>
+  <object id="3026" gid="22" x="5952" y="10064" width="44" height="5"/>
+  <object id="3027" gid="19" x="5552" y="9696" width="112" height="46"/>
+  <object id="3028" gid="64" x="5472" y="9560" width="14" height="15"/>
+  <object id="3029" gid="65" x="5480" y="9561" width="24" height="14"/>
+  <object id="3030" gid="75" x="5544" y="9560" width="16" height="6"/>
+  <object id="3031" gid="75" x="5543" y="9554" width="16" height="6"/>
+  <object id="3032" gid="22" x="5544" y="10059" width="44" height="5"/>
+  <object id="3033" gid="24" x="5952" y="10059" width="46" height="6"/>
+  <object id="3034" gid="75" x="5544" y="9548" width="16" height="6"/>
+  <object id="3035" gid="30" x="6616" y="10304" width="114" height="23"/>
+  <object id="3038" gid="30" x="6632" y="10282" width="114" height="23"/>
+  <object id="3044" gid="15" x="7016" y="10304" width="228" height="96"/>
+  <object id="3045" gid="34" x="7248" y="10304" width="38" height="21"/>
+  <object id="3046" gid="35" x="7288" y="10304" width="38" height="21"/>
+  <object id="3049" gid="51" x="7568" y="9952" width="38" height="22"/>
+  <object id="3050" gid="51" x="7592" y="9952" width="38" height="22"/>
+  <object id="3051" gid="51" x="7736" y="9952" width="38" height="22"/>
+  <object id="3052" gid="52" x="7704" y="9952" width="44" height="22"/>
+  <object id="3053" gid="53" x="7840" y="9952" width="42" height="22"/>
+  <object id="3054" gid="54" x="7880" y="9952" width="44" height="22"/>
+  <object id="3055" gid="56" x="7936" y="9952" width="14" height="18"/>
+  <object id="3056" gid="65" x="6016" y="10056" width="24" height="14"/>
+  <object id="3057" gid="56" x="7944" y="9952" width="14" height="18"/>
+  <object id="3065" gid="7" x="8616" y="10048" width="30" height="15"/>
+  <object id="3066" gid="21" x="8568" y="9984" width="20" height="29"/>
+  <object id="3067" gid="22" x="8648" y="10048" width="44" height="5"/>
+  <object id="3068" gid="23" x="8696" y="10048" width="50" height="5"/>
+  <object id="3069" gid="32" x="7024" y="10208" width="80" height="23"/>
+  <object id="3071" gid="45" x="8824" y="9920" width="160" height="145"/>
+  <object id="3072" gid="66" x="9160" y="9920" width="134" height="79"/>
+  <object id="3073" gid="76" x="9304" y="9920" width="18" height="17"/>
+  <object id="3074" gid="47" x="9328" y="9920" width="38" height="30"/>
+  <object id="3075" gid="42" x="9112" y="9920" width="80" height="180"/>
+  <object id="3076" gid="58" x="9784" y="10144" width="42" height="127"/>
+  <object id="3077" gid="65" x="9936" y="10144" width="24" height="14"/>
+  <object id="3078" gid="64" x="9928" y="10144" width="14" height="15"/>
+  <object id="3080" gid="32" x="10120" y="10144" width="80" height="23"/>
+  <object id="3082" gid="32" x="10107" y="10121" width="80" height="23"/>
+  <object id="3083" gid="34" x="9960" y="10144" width="38" height="21"/>
+  <object id="3084" gid="36" x="10264" y="10400" width="149" height="51"/>
+  <object id="3085" gid="37" x="10504" y="10400" width="121" height="51"/>
+  <object id="3086" gid="59" x="10432" y="10400" width="42" height="127"/>
+  <object id="3087" gid="63" x="10632" y="10400" width="144" height="127"/>
+  <object id="3102" gid="64" x="11480" y="10528" width="14" height="15"/>
+  <object id="3103" gid="77" x="11504" y="10528" width="16" height="17"/>
+  <object id="3104" gid="76" x="11520" y="10528" width="18" height="17"/>
+  <object id="3105" gid="75" x="11520" y="10512" width="16" height="6"/>
+  <object id="3107" gid="18" x="11320" y="10528" width="111" height="46"/>
+  <object id="3108" gid="1" x="11112" y="10528" width="26" height="42"/>
+  <object id="3110" gid="30" x="7328" y="10304" width="114" height="23"/>
+  <object id="3111" gid="42" x="7992" y="9952" width="80" height="180"/>
+  <object id="3117" gid="76" x="8744" y="10048" width="18" height="17"/>
+  <object id="3119" gid="10" x="8784" y="9920" width="20" height="8"/>
+  <object id="3120" gid="10" x="8800" y="9920" width="20" height="8"/>
+  <object id="3121" gid="10" x="8800" y="9912" width="20" height="8"/>
+  <object id="3122" gid="10" x="8816" y="9920" width="20" height="8"/>
+  <object id="3123" gid="10" x="8816" y="9912" width="20" height="8"/>
+  <object id="3124" gid="10" x="8808" y="9904" width="20" height="8"/>
+  <object id="3125" gid="9" x="8784" y="9912" width="18" height="8"/>
+  <object id="3126" gid="9" x="8800" y="9904" width="18" height="8"/>
+  <object id="3127" gid="9" x="8808" y="9920" width="18" height="8"/>
+  <object id="3128" gid="8" x="8832" y="9920" width="20" height="8"/>
+  <object id="3129" gid="8" x="9368" y="9920" width="20" height="8"/>
+  <object id="3130" gid="8" x="9616" y="10144" width="20" height="8"/>
+  <object id="3136" gid="77" x="10712" y="10400" width="16" height="17"/>
+  <object id="3138" gid="9" x="11248" y="10528" width="18" height="8"/>
+  <object id="3139" gid="9" x="11248" y="10520" width="18" height="8"/>
+  <object id="3140" gid="75" x="11552" y="10528" width="16" height="6"/>
+ </objectgroup>
+ <objectgroup id="64" name="bg_deco_images02x" opacity="0.45"/>
+ <objectgroup id="41" name="bg_deco_images02">
+  <object id="2981" gid="50" x="5536" y="10600" width="36" height="30"/>
+  <object id="2987" gid="8" x="5944" y="10600" width="20" height="8"/>
+  <object id="2988" gid="9" x="5960" y="10600" width="18" height="8"/>
+  <object id="2992" gid="77" x="6464" y="10600" width="16" height="17"/>
+  <object id="2993" gid="75" x="6464" y="10584" width="16" height="6"/>
+  <object id="2994" gid="76" x="6256" y="10600" width="18" height="17"/>
+  <object id="3018" gid="8" x="6280" y="10064" width="20" height="8"/>
+  <object id="3019" gid="9" x="6280" y="10056" width="18" height="8"/>
+  <object id="3070" gid="32" x="7104" y="10208" width="80" height="23"/>
+ </objectgroup>
+ <objectgroup id="69" name="bg_deco_imagesx"/>
+ <objectgroup id="29" name="bg_deco_images"/>
+ <group id="48" name="*** BG DECO ***"/>
+ <objectgroup color="#ffaaff" id="33" name="fg_deco_texts" tintcolor="#00ff00"/>
+ <objectgroup color="#55ffff" id="28" name="fg_deco_shapes" tintcolor="#55ffff">
+  <object id="3039" x="7464" y="10296">
+   <polygon points="0,0 16,-16 32,0 32,-16 16,-32 0,-16"/>
+  </object>
+  <object id="3040" x="7464" y="10264">
+   <polygon points="0,0 16,-16 32,0 32,-16 16,-32 0,-16"/>
+  </object>
+ </objectgroup>
+ <objectgroup id="79" name="fg_deco_images03x"/>
+ <objectgroup id="60" name="fg_deco_images03">
+  <object id="2978" gid="21" x="5592" y="10600" width="20" height="29"/>
+ </objectgroup>
+ <objectgroup id="78" name="fg_deco_images02x"/>
+ <objectgroup id="59" name="fg_deco_images02">
+  <object id="3041" gid="2" x="6896" y="10304" width="24" height="15"/>
+  <object id="3042" gid="3" x="6896" y="10289" width="26" height="15"/>
+  <object id="3043" gid="8" x="6920" y="10304" width="20" height="8"/>
+  <object id="3060" gid="57" x="8264" y="9952" width="16" height="20"/>
+  <object id="3061" gid="57" x="8280" y="9952" width="16" height="20"/>
+  <object id="3062" gid="57" x="8296" y="9952" width="16" height="20"/>
+  <object id="3063" gid="57" x="8312" y="9952" width="16" height="20"/>
+  <object id="3064" gid="57" x="8328" y="9952" width="16" height="20"/>
+ </objectgroup>
+ <objectgroup id="70" name="fg_deco_imagesx"/>
+ <objectgroup id="30" name="fg_deco_images"/>
+ <group id="83" name="*** FG DECO ***"/>
+ <objectgroup color="#ffaa00" id="24" name="physics_players" tintcolor="#000000">
+  <object id="654" x="5568" y="10520" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#ffff00" id="52" name="physics_ground_nmes">
+  <object id="2952" x="8960" y="9856" width="32" height="32"/>
+  <object id="2953" x="9040" y="9856" width="32" height="32"/>
+  <object id="2954" x="9120" y="9856" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#aa0000" id="19" name="physics_ground_nmes02" tintcolor="#aa0000">
+  <object id="2955" name="lives" x="9728" y="10080" width="32" height="32"/>
+  <object id="2956" name="lives" x="9648" y="10080" width="32" height="32"/>
+  <object id="2957" x="9808" y="10080" width="32" height="32"/>
+  <object id="2958" name="lives" x="9888" y="10080" width="32" height="32"/>
+  <object id="2959" name="lives" x="9968" y="10080" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#0000ff" id="47" name="physics_ground_nmes03">
+  <object id="2960" x="10400" y="10336" width="32" height="32"/>
+  <object id="2961" x="10496" y="10336" width="32" height="32"/>
+  <object id="2962" x="10592" y="10336" width="32" height="32"/>
+  <object id="2963" name="doorBB" x="10688" y="10336" width="32" height="32"/>
+  <object id="2964" x="10784" y="10336" width="32" height="32"/>
+  <object id="2965" x="10880" y="10336" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#005500" id="23" name="physics_flying_nmes" tintcolor="#005500"/>
+ <group id="49" name="*** PHYSICS_ACTORS ***"/>
+ <objectgroup color="#aaaa00" id="84" name="physics_lives">
+  <object id="2941" x="7904" y="9904" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#00aa00" id="20" name="physics_coins" tintcolor="#00aa00">
+  <object id="2849" x="5616" y="9648" width="32" height="32"/>
+  <object id="2911" x="5808" y="9648" width="32" height="32"/>
+  <object id="2920" x="7504" y="9760" width="32" height="32"/>
+  <object id="2921" x="7552" y="9792" width="32" height="32"/>
+  <object id="2922" x="7600" y="9824" width="32" height="32"/>
+  <object id="2940" x="6088" y="10008" width="32" height="32"/>
+  <object id="2942" x="8696" y="10000" width="32" height="32"/>
+  <object id="2943" x="8648" y="10000" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#aaaaff" id="38" name="physics_keys">
+  <object id="2910" name="doorAA" x="5496" y="9512" width="32" height="32"/>
+ </objectgroup>
+ <group id="50" name="*** PHYSICS_COLLECTIBLES ***"/>
+ <objectgroup color="#000000" id="7" name="physics_grounds">
+  <object id="1837" x="5088" y="10600" width="672" height="88"/>
+  <object id="2205" x="7496" y="9952" width="544" height="360"/>
+  <object id="2371" x="5088" y="9280" width="344" height="1328"/>
+  <object id="2524" x="5424" y="9280" width="1352" height="128"/>
+  <object id="2546" x="6576" y="10304" width="1464" height="384"/>
+  <object id="2583" x="5792" y="9696" width="96" height="288"/>
+  <object id="2586" x="5424" y="10064" width="952" height="280"/>
+  <object id="2806" x="9464" y="10144" width="744" height="544"/>
+  <object id="2807" x="5856" y="9400" width="160" height="360"/>
+  <object id="2814" x="8768" y="9920" width="704" height="768"/>
+  <object id="2838" x="6768" y="9280" width="440" height="816"/>
+  <object id="2841" x="7200" y="9280" width="4440" height="208"/>
+  <object id="2844" x="8544" y="9984" width="64" height="704"/>
+  <object id="2846" x="6864" y="10088" width="240" height="88"/>
+  <object id="2892" x="8256" y="9952" width="96" height="736"/>
+  <object id="2902" x="6368" y="10240" width="128" height="32"/>
+  <object id="2904" x="6016" y="10056" width="192" height="8"/>
+  <object id="2908" x="5536" y="9696" width="144" height="272"/>
+  <object id="2923" x="5864" y="10600" width="256" height="88"/>
+  <object id="2924" x="6224" y="10600" width="360" height="88"/>
+  <object id="2945" x="8600" y="10048" width="176" height="640"/>
+  <object id="2948" x="8672" y="9480" width="48" height="488"/>
+  <object id="2950" x="10200" y="10400" width="872" height="288"/>
+  <object id="2951" x="11064" y="10528" width="600" height="160"/>
+  <object id="2966" x="10656" y="9480" width="760" height="768"/>
+  <object id="2975" name="t" x="5432" y="10594.9" width="93.9375" height="5.09091"/>
+ </objectgroup>
+ <objectgroup color="#5555ff" id="12" name="physics_ladders" locked="1" tintcolor="#5555ff">
+  <object id="2882" x="6544" y="10304" width="32" height="296"/>
+ </objectgroup>
+ <objectgroup color="#aa007f" id="16" name="physics_ptpfs" tintcolor="#5555ff">
+  <object id="2901" name="t" x="6544" y="10304" width="32" height="8"/>
+  <object id="2903" x="6376" y="10152" width="104" height="16"/>
+  <object id="2912" x="5464" y="9560" width="104" height="8"/>
+  <object id="2947" x="8720" y="9968" width="48" height="8"/>
+ </objectgroup>
+ <objectgroup color="#00ff00" id="13" name="physics_steps" tintcolor="#004fee">
+  <object id="2905" x="6176" y="10060" width="32" height="32"/>
+  <object id="2906" x="6016" y="10060" width="32" height="32"/>
+  <object id="2913" x="6344" y="10072" width="32" height="8"/>
+  <object id="2937" x="8256" y="9956" width="96" height="8"/>
+  <object id="2976" x="5494" y="10599" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#aaff00" id="22" name="physics_walls" tintcolor="#aaff00">
+  <object id="2842" x="5664" y="9704" width="16" height="256"/>
+  <object id="2907" x="5792" y="9704" width="16" height="272"/>
+  <object id="2909" x="5416" y="9504" width="16" height="512"/>
+ </objectgroup>
+ <objectgroup color="#00557f" id="86" name="physics_mvpfs" tintcolor="#00557f">
+  <object id="2933" name="idAAdx168dy0vel6dirR" x="8040" y="9960" width="48" height="8"/>
+ </objectgroup>
+ <objectgroup color="#5555ff" id="17" name="physics_ptmvpfs">
+  <object id="2938" name="idAAdx256dy0vel6dirR" x="8352" y="9960" width="64" height="8"/>
+ </objectgroup>
+ <objectgroup id="82" name="physics_doors">
+  <object id="2857" name="doorAAdx0dy104vel16dirU" x="5592" y="9960" width="32" height="104"/>
+  <object id="2914" name="doorAAdx0dy136vel16dirU" x="6960" y="10168" width="32" height="136"/>
+  <object id="2967" name="doorBBdx0dy160vel24dirU" x="11000" y="10240" width="32" height="160"/>
+ </objectgroup>
+ <objectgroup color="#55aaff" id="44" name="physics_sensors" tintcolor="#55aaff">
+  <object id="2851" name="doorAA" x="5504" y="9952" width="32" height="112"/>
+  <object id="2852" x="5472" y="9856" width="32" height="208"/>
+  <object id="2861" name="doorAA" x="5680" y="9952" width="32" height="112"/>
+  <object id="2862" x="5712" y="9856" width="32" height="208"/>
+  <object id="2915" name="doorAA" x="6832" y="10096" width="32" height="208"/>
+  <object id="2916" x="6800" y="10096" width="32" height="208"/>
+  <object id="2917" name="doorAA" x="7104" y="10096" width="32" height="208"/>
+  <object id="2918" x="7136" y="10096" width="32" height="208"/>
+  <object id="2968" name="doorBB" x="10880" y="10248" width="32" height="152"/>
+  <object id="2969" x="10840" y="10248" width="32" height="152"/>
+ </objectgroup>
+ <objectgroup color="#00aa7f" id="14" name="physics_springs" tintcolor="#00aa7f">
+  <object id="2919" name="vx0vy20" x="7464" y="10304" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#ff0000" id="40" name="physics_spikes">
+  <object id="2879" x="7504" y="9952" width="48" height="8"/>
+  <object id="2930" x="7640" y="9952" width="48" height="8"/>
+  <object id="2931" x="7784" y="9952" width="48" height="8"/>
+ </objectgroup>
+ <objectgroup color="#0000ff" id="27" name="physics_voids" tintcolor="#0000ff">
+  <object id="2884" x="5696" y="10688" width="608" height="40"/>
+  <object id="2934" x="8040" y="10240" width="504" height="32"/>
+ </objectgroup>
+ <objectgroup color="#ff5500" id="31" name="physics_exits" tintcolor="#ffff00">
+  <object id="2854" x="11640" y="10216" width="24" height="312"/>
+ </objectgroup>
+ <group id="51" name="*** PHYSICS_WORLD ***"/>
+ <objectgroup color="#ffffff" id="45" name="physics_map_def" locked="1" opacity="0.4">
+  <object id="1172" x="5088" y="9280" width="6552" height="1408"/>
+ </objectgroup>
+ <objectgroup id="76" name="level" locked="1" opacity="0.25">
+  <object id="2900" gid="78" x="2768" y="6800" width="11648" height="5824"/>
+ </objectgroup>
+ <group id="53" name="*** REFS ***">
+  <objectgroup color="#aa0000" id="77" name="annotations"/>
+  <objectgroup color="#ffffff" id="26" name="physics_mvpfs_REFS" tintcolor="#ffffff"/>
+  <objectgroup color="#ffffff" id="36" name="level_design_REFS">
+   <object id="2828" x="5528" y="9592" width="24" height="104"/>
+   <object id="2834" x="6400" y="10048" width="24" height="104"/>
+   <object id="2926" x="5760" y="10616" width="112" height="8"/>
+   <object id="2936" x="8040" y="9968" width="168" height="16"/>
+   <object id="2939" x="8352" y="9968" width="256" height="16"/>
+   <object id="2944" x="8744" y="9944" width="24" height="104"/>
+   <object id="2949" x="11072" y="10400" width="24" height="104"/>
+  </objectgroup>
+ </group>
+</map>

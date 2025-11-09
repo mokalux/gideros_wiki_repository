@@ -66,7 +66,7 @@ end
 -- prefs file and initial default global prefs values
 g_configfilepath = "|D|config.txt"
 g_language = application:getLanguage()
-g_currlevel = 1 -- 2, change here when you want to test a level
+g_currlevel = 2 -- 1, 2, change here when you want to test a level
 g_difficulty = 1 -- 0=easy, 1=normal, 2=hard
 g_bgmvolume = 20 -- 0-100
 g_sfxvolume = 20 -- 0-100

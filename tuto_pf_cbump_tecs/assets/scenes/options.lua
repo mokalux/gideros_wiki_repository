@@ -67,9 +67,8 @@ function Options:init()
 	local tooltiplayer = Sprite.new()
 	-- buttons
 	local key
-	self.sfxsound = Sound.new("audio/ui/sfx_sounds_button1.wav")
-	self.sfxvolume = g_sfxvolume * 0.01
-	self.channel = self.sfxsound:play(0, false, true) -- feedback
+	self.btnsnd = { sound=Sound.new("audio/ui/sfx_sounds_button1.wav"), time=0, delay=0.2, }
+	self.btnvolume = g_sfxvolume * 0.01
 	-- movement
 	if (keyNames[g_keyleft] or 0) == 0 then key = utf8.char(g_keyleft)
 	else key = keyNames[g_keyleft] -- display nice KeyCode name
@@ -79,7 +78,7 @@ function Options:init()
 		pixelscalexup=0.8, pixelscalexdown=0.9,
 		pixelcolorup=g_ui_theme.pixelcolorup, pixelcolordown=g_ui_theme.pixelcolordown,
 		text=key, ttf=myttf, textcolorup=g_ui_theme.textcolorup, textcolordown=g_ui_theme.textcolordown,
-		sound=self.sfxsound, volume=self.sfxvolume,
+		sound=self.btnsnd, volume=self.btnvolume,
 		tooltiptext="left", tooltipttf=myttf, tooltiptextcolor=g_ui_theme.tooltiptextcolor,
 		tooltipoffsetx=g_ui_theme.tooltipoffsetx, tooltipoffsety=g_ui_theme.tooltipoffsety*0.5,
 	}, 2, tooltiplayer)
@@ -91,7 +90,7 @@ function Options:init()
 		pixelscalexup=0.8, pixelscalexdown=0.9,
 		pixelcolorup=g_ui_theme.pixelcolorup, pixelcolordown=g_ui_theme.pixelcolordown,
 		text=key, ttf=myttf, textcolorup=g_ui_theme.textcolorup, textcolordown=g_ui_theme.textcolordown,
-		sound=self.sfxsound, volume=self.sfxvolume,
+		sound=self.btnsnd, volume=self.btnvolume,
 		tooltiptext="right", tooltipttf=myttf, tooltiptextcolor=g_ui_theme.tooltiptextcolor,
 		tooltipoffsetx=g_ui_theme.tooltipoffsetx, tooltipoffsety=g_ui_theme.tooltipoffsety*0.5,
 	}, 3, tooltiplayer)
@@ -103,7 +102,7 @@ function Options:init()
 		pixelscalexup=0.8, pixelscalexdown=0.9,
 		pixelcolorup=g_ui_theme.pixelcolorup, pixelcolordown=g_ui_theme.pixelcolordown,
 		text=key, ttf=myttf, textcolorup=g_ui_theme.textcolorup, textcolordown=g_ui_theme.textcolordown,
-		sound=self.sfxsound, volume=self.sfxvolume,
+		sound=self.btnsnd, volume=self.btnvolume,
 		tooltiptext="up", tooltipttf=myttf, tooltiptextcolor=g_ui_theme.tooltiptextcolor,
 		tooltipoffsetx=g_ui_theme.tooltipoffsetx, tooltipoffsety=g_ui_theme.tooltipoffsety*0.5,
 	}, 1, tooltiplayer)
@@ -115,7 +114,7 @@ function Options:init()
 		pixelscalexup=0.8, pixelscalexdown=0.9,
 		pixelcolorup=g_ui_theme.pixelcolorup, pixelcolordown=g_ui_theme.pixelcolordown,
 		text=key, ttf=myttf, textcolorup=g_ui_theme.textcolorup, textcolordown=g_ui_theme.textcolordown,
-		sound=self.sfxsound, volume=self.sfxvolume,
+		sound=self.btnsnd, volume=self.btnvolume,
 		tooltiptext="down", tooltipttf=myttf, tooltiptextcolor=g_ui_theme.tooltiptextcolor,
 		tooltipoffsetx=g_ui_theme.tooltipoffsetx, tooltipoffsety=g_ui_theme.tooltipoffsety*0.5,
 	}, 4, tooltiplayer)
@@ -128,7 +127,7 @@ function Options:init()
 		pixelscalexup=0.8, pixelscalexdown=0.9,
 		pixelcolorup=g_ui_theme.pixelcolorup, pixelcolordown=g_ui_theme.pixelcolordown,
 		text=key, ttf=myttf, textcolorup=g_ui_theme.textcolorup, textcolordown=g_ui_theme.textcolordown,
-		sound=self.sfxsound, volume=self.sfxvolume,
+		sound=self.btnsnd, volume=self.btnvolume,
 		tooltiptext="shoot", tooltipttf=myttf, tooltiptextcolor=g_ui_theme.tooltiptextcolor,
 		tooltipoffsetx=g_ui_theme.tooltipoffsetx, tooltipoffsety=g_ui_theme.tooltipoffsety*0.5,
 	}, 5, tooltiplayer)
@@ -140,7 +139,7 @@ function Options:init()
 		pixelscalexup=0.8, pixelscalexdown=0.9,
 		pixelcolorup=g_ui_theme.pixelcolorup, pixelcolordown=g_ui_theme.pixelcolordown,
 		text=key, ttf=myttf, textcolorup=g_ui_theme.textcolorup, textcolordown=g_ui_theme.textcolordown,
-		sound=self.sfxsound, volume=self.sfxvolume,
+		sound=self.btnsnd, volume=self.btnvolume,
 		tooltiptext="shield", tooltipttf=myttf, tooltiptextcolor=g_ui_theme.tooltiptextcolor,
 		tooltipoffsetx=g_ui_theme.tooltipoffsetx, tooltipoffsety=g_ui_theme.tooltipoffsety*0.5,
 	}, 6, tooltiplayer)
@@ -152,7 +151,7 @@ function Options:init()
 		pixelscalexup=0.8, pixelscalexdown=0.9,
 		pixelcolorup=g_ui_theme.pixelcolorup, pixelcolordown=g_ui_theme.pixelcolordown,
 		text=key, ttf=myttf, textcolorup=g_ui_theme.textcolorup, textcolordown=g_ui_theme.textcolordown,
-		sound=self.sfxsound, volume=self.sfxvolume,
+		sound=self.btnsnd, volume=self.btnvolume,
 		tooltiptext="dash", tooltipttf=myttf, tooltiptextcolor=g_ui_theme.tooltiptextcolor,
 		tooltipoffsetx=g_ui_theme.tooltipoffsetx, tooltipoffsety=g_ui_theme.tooltipoffsety*0.5,
 	}, 7, tooltiplayer)
@@ -162,7 +161,7 @@ function Options:init()
 		pixelscalexup=0.8, pixelscalexdown=0.9,
 		pixelcolorup=g_ui_theme.pixelcolorup, pixelcolordown=g_ui_theme.pixelcolordown,
 		text="MENU", ttf=myttf, textcolorup=0x0009B3, textcolordown=0x45d1ff,
-		sound=self.sfxsound, volume=self.sfxvolume,
+		sound=self.btnsnd, volume=self.btnvolume,
 		tooltiptext="Enter", tooltipttf=myttf, tooltiptextcolor=g_ui_theme.tooltiptextcolor,
 		tooltipoffsetx=g_ui_theme.tooltipoffsetx, tooltipoffsety=-g_ui_theme.tooltipoffsety*4,
 	}, 8, tooltiplayer)
@@ -275,28 +274,14 @@ function Options:onValueChanged(e)
 	if e.id == 1 then -- bgm volume
 		g_bgmvolume = e.value
 		local snd = Sound.new("audio/ui/sfx_sounds_button1.wav")
-		if self.channel and not self.channel:isPlaying() then -- sfx
-			self.channel = snd:play()
-			if self.channel then
-				self.channel:setVolume(g_sfxvolume*0.01)
-			else
-				print("Options lost bgm channel!", self.channel)
-				self.channel = snd:play(0, false, true)
-			end
-		end
+		local channel = snd:play()
+		if channel then channel:setVolume(g_sfxvolume*0.01) end
 		self.bgmvolumeslider:setValue(g_bgmvolume)
 	elseif e.id == 2 then -- sfx volume
 		g_sfxvolume = e.value
 		local snd = Sound.new("audio/ui/sfx_sounds_button1.wav")
-		if self.channel and not self.channel:isPlaying() then -- sfx
-			self.channel = snd:play()
-			if self.channel then
-				self.channel:setVolume(g_sfxvolume*0.01)
-			else
-				print("Options lost sfx channel!", self.channel)
-				self.channel = snd:play(0, false, true)
-			end
-		end
+		local channel = snd:play()
+		if channel then channel:setVolume(g_sfxvolume*0.01) end
 		self.sfxvolumeslider:setValue(g_sfxvolume)
 		for _, v in pairs(self.btns) do v:setVolume(g_sfxvolume*0.01) end -- change the ui buttons sfx volume
 	elseif e.id == 3 then -- difficulty

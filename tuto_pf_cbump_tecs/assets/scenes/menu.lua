@@ -7,8 +7,8 @@ function Menu:init()
 	bg:setScale(3.2)
 	-- buttons
 	local myttf = TTFont.new("fonts/Cabin-Regular-TTF.ttf", 3*8) -- UI
-	local sndbtn = Sound.new("audio/ui/sfx_sounds_button1.wav")
-	local sfxvolume = g_sfxvolume*0.01
+	local btnsnd = { sound=Sound.new("audio/ui/sfx_sounds_button1.wav"), time=0, delay=0.2, }
+	local btnvolume = g_sfxvolume*0.01
 	local tooltiplayer = Sprite.new()
 	local difficulty = g_difficulty
 	if difficulty >= 2 then difficulty = "hard"
@@ -26,7 +26,7 @@ function Menu:init()
 		pixelscalexup=0.8, pixelscalexdown=0.9,
 		pixelcolorup=g_ui_theme.pixelcolorup, pixelcolordown=g_ui_theme.pixelcolordown,
 		text="START", ttf=myttf, textcolorup=g_ui_theme.textcolorup, textcolordown=g_ui_theme.textcolordown,
-		sound=sndbtn, volume=sfxvolume,
+		sound=btnsnd, volume=btnvolume,
 		tooltiptext=difficulty, tooltipttf=myttf, tooltiptextcolor=g_ui_theme.tooltiptextcolor,
 		tooltipoffsetx=g_ui_theme.tooltipoffsetx-2*8, tooltipoffsety=g_ui_theme.tooltipoffsety+0.5*8,
 	}, 1, tooltiplayer)
@@ -35,14 +35,14 @@ function Menu:init()
 		pixelscalexup=0.8, pixelscalexdown=0.9,
 		pixelcolorup=g_ui_theme.pixelcolorup, pixelcolordown=g_ui_theme.pixelcolordown,
 		text="OPTIONS", ttf=myttf, textcolorup=g_ui_theme.textcolorup, textcolordown=g_ui_theme.textcolordown,
-		sound=sndbtn, volume=sfxvolume,
+		sound=btnsnd, volume=btnvolume,
 	}, 2)
 	local mybtn03 = ButtonMonster.new({
 		autoscale=false, pixelwidth=16*8, pixelheight=7*8,
 		pixelscalexup=0.8, pixelscalexdown=0.9,
 		pixelcolorup=g_ui_theme.pixelcolorup, pixelcolordown=g_ui_theme.exit,
 		text="EXIT", ttf=myttf, textcolorup=g_ui_theme.textcolorup, textcolordown=g_ui_theme.textcolordown,
-		sound=sndbtn, volume=sfxvolume,
+		sound=btnsnd, volume=btnvolume,
 	}, 3)
 	-- buttons table for keyboard navigation
 	self.btns = {}

@@ -2,8 +2,7 @@ SAnimation = Core.class()
 
 function SAnimation:init(xtiny)
 	xtiny.processingSystem(self) -- called once on init and every frames
-	self.sndstepgrass = Sound.new("audio/sfx/footstep/Grass02.wav")
-	self.channel = self.sndstepgrass:play(0, false, true) -- startTime, looping, paused
+	self.sndstepgrass = { sound=Sound.new("audio/sfx/footstep/Grass02.wav"), time=0, delay=0.2, }
 end
 
 function SAnimation:filter(ent) -- tiny function
@@ -52,9 +51,13 @@ function SAnimation:process(ent, dt) -- tiny function
 			if ent.isplayer1 then
 				if (anim.curranim == g_ANIM_WALK_R or anim.curranim == g_ANIM_RUN_R) and
 					(anim.frame == 3 or anim.frame == 7) then
-					self.channel = self.sndstepgrass:play()
-					if self.channel then
-						self.channel:setVolume(g_sfxvolume*0.01)
+					local snd = self.sndstepgrass
+					local curr = os.timer()
+					local prev = snd.time
+					if curr - prev > snd.delay then
+						local channel = snd.sound:play()
+						if channel then channel:setVolume(g_sfxvolume*0.01) end
+						snd.time = curr
 					end
 				end
 			end

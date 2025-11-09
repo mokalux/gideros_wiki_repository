@@ -6,8 +6,7 @@ function SCollectibles:init(xtiny, xbump, xplayer1) -- tiny function
 	self.bworld = xbump
 	self.player1 = xplayer1
 	-- sfx
-	self.snd = Sound.new("audio/sfx/sfx_coin_double1.wav")
-	self.channel = self.snd:play(0, false, true) -- startTime, looping, paused
+	self.snd = { sound=Sound.new("audio/sfx/sfx_coin_double1.wav"), time=0, delay=0.2, }
 end
 
 function SCollectibles:filter(ent) -- tiny function
@@ -27,14 +26,13 @@ function SCollectibles:process(ent, dt) -- tiny function
 			local newV = (v - minSrc) / (maxSrc - minSrc) * (maxDst - minDst) + minDst
 			return not clampValue and newV or clamp(newV, minDst >< maxDst, minDst <> maxDst)
 		end
-		if self.channel and not self.channel:isPlaying() then -- sfx
-			self.channel = self.snd:play()
-			if self.channel then
-				self.channel:setVolume(g_sfxvolume*0.01)
-			else
-				print("SCollectibles lost channel!", self.channel)
-				self.channel = self.snd:play(0, false, true)
-			end
+		local snd = self.snd -- sfx
+		local curr = os.timer()
+		local prev = snd.time
+		if curr - prev > snd.delay then
+			local channel = snd.sound:play()
+			if channel then channel:setVolume(g_sfxvolume*0.01) end
+			snd.time = curr
 		end
 		if ent.eid == "coins" then -- coins
 			self.tiny.numberofcoins += 1

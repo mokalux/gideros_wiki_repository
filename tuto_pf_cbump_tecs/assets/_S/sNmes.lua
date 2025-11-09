@@ -8,8 +8,7 @@ function SNmes:init(xtiny, xbump, xplayer1) -- tiny function
 	self.bworld = xbump
 	self.player1 = xplayer1
 	-- sfx
-	self.snd = Sound.new("audio/sfx/sfx_deathscream_human14.wav")
-	self.channel = self.snd:play(0, false, true) -- startTime, looping, paused
+	self.snd = { sound=Sound.new("audio/sfx/sfx_deathscream_human14.wav"), time=0, delay=0.2, }
 end
 
 function SNmes:filter(ent) -- tiny function
@@ -166,14 +165,13 @@ function SNmes:process(ent, dt) -- tiny function
 	end
 	-- deaded
 	if ent.currlives <= 0 then
-		if self.channel and not self.channel:isPlaying() then -- sfx
-			self.channel = self.snd:play()
-			if self.channel then
-				self.channel:setVolume(g_sfxvolume*0.01)
-			else
-				print("SNmes lost channel!", self.channel)
-				self.channel = self.snd:play(0, false, true)
-			end
+		local snd = self.snd -- sfx
+		local curr = os.timer()
+		local prev = snd.time
+		if curr - prev > snd.delay then
+			local channel = snd.sound:play()
+			if channel then channel:setVolume(g_sfxvolume*0.01) end
+			snd.time = curr
 		end
 		-- stop all movements
 		ent.isleft = false

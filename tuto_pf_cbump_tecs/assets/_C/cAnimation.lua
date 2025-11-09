@@ -30,7 +30,7 @@ function CAnimation:cutSpritesheet(xspritesheetpath, xcols, xrows, xanimsimgs, x
 	-- our final sprite
 	self.sprite = Sprite.new()
 	self.sprite:addChild(self.bmp)
-	self.bmp:setColorTransform(8*32/255, 8*32/255, 8*32/255, 9*32/255)
+	self.bmp:setColorTransform(8*32/255, 8*32/255, 8*32/255, 10*32/255)
 end
 
 function CAnimation:createAnim(xanims, xanimname, xanimsimgs, xtable, xstart, xfinish)

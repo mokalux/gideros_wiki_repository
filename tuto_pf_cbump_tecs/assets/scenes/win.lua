@@ -19,8 +19,8 @@ function Win:init()
 	tw:addEventListener("finished", function(e) --
 	end)
 	-- buttons setup
-	local sndbtn = Sound.new("audio/ui/sfx_sounds_button1.wav")
-	local sfxvolume = g_sfxvolume * 0.01
+	local btnsnd = { sound=Sound.new("audio/ui/sfx_sounds_button1.wav"), time=0, delay=0.2, }
+	local btnvolume = g_sfxvolume * 0.01
 	local tooltiplayer = Sprite.new()
 	-- buttons (only one button)
 	local mybtnmenu = ButtonMonster.new({
@@ -28,7 +28,7 @@ function Win:init()
 		pixelscalexup=0.8, pixelscalexdown=0.9,
 		pixelcolorup=g_ui_theme.pixelcolorup, pixelcolordown=g_ui_theme.pixelcolordown,
 		text="MENU", ttf=myttf, textcolorup=g_ui_theme.textcolorup, textcolordown=g_ui_theme.textcolordown,
-		sound=sndbtn, volume=sfxvolume,
+		sound=btnsnd, volume=btnvolume,
 	}, 1, tooltiplayer)
 	-- buttons table for keyboard navigation
 	self.btns = {}

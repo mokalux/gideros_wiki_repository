@@ -8,8 +8,7 @@ function SPlayer1:init(xtiny, xbump, xcamera) -- tiny function
 	self.camera = xcamera -- camera shake
 	self.camcurrzoom = self.camera:getZoom()
 	-- sfx
-	self.snd = Sound.new("audio/sfx/sfx_deathscream_human14.wav")
-	self.channel = self.snd:play(0, false, true) -- startTime, looping, paused
+	self.snd = { sound=Sound.new("audio/sfx/sfx_deathscream_human14.wav"), time=0, delay=0.2, }
 end
 
 function SPlayer1:filter(ent) -- tiny function
@@ -115,14 +114,13 @@ function SPlayer1:process(ent, dt) -- tiny function
 	end
 	-- hit
 	if ent.isdirty then
-		if self.channel and not self.channel:isPlaying() then -- sfx
-			self.channel = self.snd:play()
-			if self.channel then
-				self.channel:setVolume(g_sfxvolume*0.01)
-			else
-				print("SPlayer1 lost channel!", self.channel)
-				self.channel = self.snd:play(0, false, true)
-			end
+		local snd = self.snd -- sfx
+		local curr = os.timer()
+		local prev = snd.time
+		if curr - prev > snd.delay then
+			local channel = snd.sound:play()
+			if channel then channel:setVolume(g_sfxvolume*0.01) end
+			snd.time = curr
 		end
 		local function map(v, minSrc, maxSrc, minDst, maxDst, clampValue)
 			local newV = (v - minSrc) / (maxSrc - minSrc) * (maxDst - minDst) + minDst

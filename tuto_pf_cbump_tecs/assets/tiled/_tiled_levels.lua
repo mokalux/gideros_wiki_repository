@@ -10,24 +10,24 @@ function TiledLevels:init(tmpath, xtiny, xbworld, xlayers)
 	local function rgb2hex(r, g, b)
 		return (r << 16) + (g << 8) + b
 	end
-	-- _______ _____ _      ______  _____ ______ _______ 
-	--|__   __|_   _| |    |  ____|/ ____|  ____|__   __|
-	--   | |    | | | |    | |__  | (___ | |__     | |   
-	--   | |    | | | |    |  __|  \___ \|  __|    | |   
-	--   | |   _| |_| |____| |____ ____) | |____   | |   
-	--   |_|  |_____|______|______|_____/|______|  |_|   
 	local dev = false -- true, false
-	-- this is the classic: a tileset with a tilemap image
 	local tsimgpath -- "tiled/", root path to tileset tilemap images
 	if dev then -- in development
 		tsimgpath = -- path to external folder
-			"C:/X_MOKA/PROJECTS/_gideros/PROTOS/GAMES/PLATFORMERS/CBUMP_TECS/_assets/PLATFORMER_CBUMP_TECS_20250707/lvl001/gfx/"
+			"C:/X_MOKA/PROJECTS/_gideros/WIKI/_assets/tuto_pf_cbump_tecs/"
 	else -- prod
 		if g_currlevel == 1 then tsimgpath = "tiled/lvl001/"
 		elseif g_currlevel == 2 then tsimgpath = "tiled/lvl001/"
 		elseif g_currlevel == 3 then tsimgpath = "tiled/lvl002/"
 		end
 	end
+	-- _______ _____ _      ______  _____ ______ _______ 
+	--|__   __|_   _| |    |  ____|/ ____|  ____|__   __|
+	--   | |    | | | |    | |__  | (___ | |__     | |   
+	--   | |    | | | |    |  __|  \___ \|  __|    | |   
+	--   | |   _| |_| |____| |____ ____) | |____   | |   
+	--   |_|  |_____|______|______|_____/|______|  |_|   
+	-- this is the classic: a tileset with a tilemap image
 	for i = 1, #tm.tilesets do -- important
 		local tileset = tm.tilesets[i]
 		-- add extra values (variables) to a tm.tilesets[i] table
@@ -41,17 +41,10 @@ function TiledLevels:init(tmpath, xtiny, xbworld, xlayers)
 				(tileset.tileheight+tileset.spacing)
 			)
 			tileset.lastgid = tileset.firstgid+(tileset.numcols*tileset.numrows)-1
-			if dev then -- dev
-				tileset.texture = Texture.new(
-					tsimgpath..tileset.image, false,
-					{ transparentColor=tonumber(tileset.transparentcolor) }
-				)
-			else -- prod
-				tileset.texture = Texture.new(
-					tsimgpath..tileset.image, false,
-					{ transparentColor=tonumber(tileset.transparentcolor) }
-				)
-			end
+			tileset.texture = Texture.new(
+				tsimgpath..tileset.image, false,
+				{ transparentColor=tonumber(tileset.transparentcolor), }
+			)
 		end
 	end
 	-- tileset function
@@ -143,6 +136,12 @@ function TiledLevels:init(tmpath, xtiny, xbworld, xlayers)
 	if #bgtpx:getRegionsNames() > 0 then print("bgtpx", bgtpx:getSize()) end
 	if #fgtp:getRegionsNames() > 0 then print("fgtp", fgtp:getSize()) end
 	if #fgtpx:getRegionsNames() > 0 then print("fgtpx", fgtpx:getSize()) end
+	-- ____  _    _ _____ _      _____    _      ________      ________ _      
+	--|  _ \| |  | |_   _| |    |  __ \  | |    |  ____\ \    / /  ____| |     
+	--| |_) | |  | | | | | |    | |  | | | |    | |__   \ \  / /| |__  | |     
+	--|  _ <| |  | | | | | |    | |  | | | |    |  __|   \ \/ / |  __| | |     
+	--| |_) | |__| |_| |_| |____| |__| | | |____| |____   \  /  | |____| |____ 
+	--|____/ \____/|_____|______|_____/  |______|______|   \/   |______|______|
 	-- tileset images function
 	local function parseImage(xobject, xlayer, xtplayer, xtexpack)
 		local bitmap
@@ -167,12 +166,6 @@ function TiledLevels:init(tmpath, xtiny, xbworld, xlayers)
 		bitmap:setPosition(xobject.x, xobject.y)
 		xlayer:addChild(bitmap)
 	end
-	-- ____  _    _ _____ _      _____    _      ________      ________ _      
-	--|  _ \| |  | |_   _| |    |  __ \  | |    |  ____\ \    / /  ____| |     
-	--| |_) | |  | | | | | |    | |  | | | |    | |__   \ \  / /| |__  | |     
-	--|  _ <| |  | | | | | |    | |  | | | |    |  __|   \ \/ / |  __| | |     
-	--| |_) | |__| |_| |_| |____| |__| | | |____| |____   \  /  | |____| |____ 
-	--|____/ \____/|_____|______|_____/  |______|______|   \/   |______|______|
 	for i = 1, #tm.layers do
 		local layer = tm.layers[i]
 		local tilemaps = {}

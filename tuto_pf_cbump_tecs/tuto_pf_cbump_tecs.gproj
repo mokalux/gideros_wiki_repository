@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-    <properties scaleMode="3" logicalWidth="360" logicalHeight="640" windowWidth="0" windowHeight="0" autorotation="0" orientation="1" fps="60" vsync="1" version="1.0" version_code="1" build_number="1" mainluaOnly="0" retinaDisplay="0" mouseToTouch="1" touchToMouse="1" mouseTouchOrder="0" architecture="7" exportMode="0" iosDevice="0" ios_bundle="com.yourdomain.yourapp-ios" atv_bundle="com.yourdomain.yourapp-atv" macos_bundle="com.yourdomain.yourapp-macos" macos_category="5" qtexp_platform="0" qtexp_org="xxx" qtexp_domain="xxx" osx_bundle="com.yourdomain" osx_signingId="" osx_installerId="" osx_category="2" winrt_org="GiderosMobile" winrt_package="com.yourdomain.yourapp" html5_host="" html5_crash="" html5_mem="256" html5_pack="0" html5_wasm="0" html5_symbols="1" html5_fbinstant="0" html5_pwa="0" html5_fbload="100" encryptCode="1" encryptAssets="1" app_icon="" tv_icon="" disableSplash="1" backgroundColor="#55aaff" splash_h_image="" splash_v_image="" app_name="game" splashScaleMode="0">
+    <properties scaleMode="3" logicalWidth="360" logicalHeight="640" windowWidth="0" windowHeight="0" autorotation="0" orientation="1" fps="60" vsync="1" version="1.0" version_code="1" build_number="1" mainluaOnly="0" retinaDisplay="0" mouseToTouch="1" touchToMouse="1" mouseTouchOrder="0" architecture="5" exportMode="0" iosDevice="0" ios_bundle="com.yourdomain.yourapp-ios" atv_bundle="com.yourdomain.yourapp-atv" macos_bundle="com.yourdomain.yourapp-macos" macos_category="5" qtexp_platform="0" qtexp_org="xxx" qtexp_domain="xxx" osx_bundle="com.yourdomain" osx_signingId="" osx_installerId="" osx_category="2" winrt_org="GiderosMobile" winrt_package="com.yourdomain.yourapp" html5_host="" html5_crash="" html5_mem="256" html5_pack="0" html5_wasm="0" html5_symbols="1" html5_fbinstant="0" html5_pwa="0" html5_fbload="100" encryptCode="1" encryptAssets="1" app_icon="" tv_icon="" disableSplash="1" backgroundColor="#55aaff" splash_h_image="" splash_v_image="" app_name="game" splashScaleMode="0">
         <imageScales/>
         <plugins>
             <plugin name="Bump" enabled="1"/>
@@ -9,7 +9,7 @@
             <plugin name="JSON" enabled="1"/>
             <plugin name="LuaFileSystem" enabled="0"/>
             <plugin name="Media plugin" enabled="0"/>
-            <plugin name="Require" enabled="1">
+            <plugin name="Require" enabled="0">
                 <property name="reqAccel" value="0"/>
                 <property name="reqAlphaCanvas" value="0"/>
                 <property name="reqCanOpenUrl" value=""/>

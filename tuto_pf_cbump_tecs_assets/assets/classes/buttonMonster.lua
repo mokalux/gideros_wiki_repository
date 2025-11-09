@@ -5,7 +5,6 @@
 -- Up, Down, Disabled, Hover,
 -- Sfx, Touch, Mouse and Keyboard navigation!
 -- Functions
-v 0.2.2: 2025-09-02 fix sound channel getting lost when messing with the mouse over a button
 v 0.2.1: 2024-04-22 added function callback (functions with no parameters for now!)
 v 0.2.0: 2023-12-01 terminator, should be fine in games too now
 v 0.1.0: 2021-06-01 total recall, this class has become a Monster! best used in menus but who knows?
@@ -69,9 +68,6 @@ function ButtonMonster:init(xparams, xselector, xttlayer)
 	-- audio?
 	self.params.sound = xparams.sound or nil -- sound fx
 	self.params.volume = xparams.volume or 0.5 -- sound volume
-	if self.params.sound then
-		self.channel = self.params.sound:play(0, false, true) -- startTime, looping, paused
-	end
 	-- EXTRAS
 	self.params.fun = xparams.fun or nil -- function (please check function name if not working!)
 	-- set warnings, errors
@@ -413,14 +409,13 @@ end
 -- AUDIO
 function ButtonMonster:selectionSfx()
 	if self.params.sound then
-		if self.channel and not self.channel:isPlaying() then
-			self.channel = self.params.sound:play()
-			if self.channel then
-				self.channel:setVolume(self.params.volume)
-			else
-				print("ButtonMonster lost channel!", self.channel)
-				self.channel = self.params.sound:play(0, false, true)
-			end
+		local snd = self.params.sound
+		local curr = os.timer()
+		local prev = snd.time
+		if curr - prev > snd.delay then
+			local channel = snd.sound:play()
+			if channel then channel:setVolume(self.params.volume) end
+			snd.time = curr
 		end
 	end
 end
